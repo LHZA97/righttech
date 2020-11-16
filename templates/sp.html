@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"> </script>
+<script type=text/javascript> $(function() { $("#mybutton").click(function () { $.getJSON('/video_shoulderpress'}); }); </script> -->
+
+<div class="content">
+    <div class="header">Pose Estimation For Weighlifting Exercise RightTech</div>
+    <video class="video" autoplay muted loop><source src="{{ url_for('static', filename='videos/sp.mp4') }}" type="video/mp4"></video>
+    <div class="container">
+        <a href='/video_shoulderpress'><input type='button' id='button' value='Front View'></a>  
+    </div>
+</div>
+{% endblock %}

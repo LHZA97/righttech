@@ -1,0 +1,35 @@
+<html>
+    <head>
+    	<meta charset="utf-8">
+    	<meta name="viewport" content="widtg=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/5156106598.js" crossorigin="anonymous"></script> 
+        <link rel="stylesheet" href="{{ url_for('static', filename='style/styles.css') }}">
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="sidebar">
+                <h2>Choose the exercise</h2>
+                <ul>
+                    <li><a href="/bp"><i class="fas fa-burn"></i>Bench Press</a></li>
+                    <li><a href="/sq"><i class="fas fa-burn"></i>Squat</a></li>
+                    <li><a href="/dl"><i class="fas fa-burn"></i>Deadlift</a></li>
+                    <li><a href="/sp"><i class="fas fa-burn"></i>Shoulder Press</a></li>
+                    <li><a href="/bc"><i class="fas fa-burn"></i>Bicep Curl</a></li>
+                    <li><a href="/te"><i class="fas fa-burn"></i>Triceps Extension</a></li>
+                </ul>
+            </div>
+            {% block head %}
+            <div class="content">
+                <div class="header">Pose Estimation For Weighlifting Exercise RightTech</div>
+                <video class="video" autoplay muted loop><source src="{{ url_for('static', filename='videos/bp.mp4') }}" type="video/mp4"></video>
+                <div class="container">
+                	<a href='/video_benchpress_left'><input type='button' id='button1' value='Left Side View'></a>
+                    <a href='/video_benchpress_right'><input type='button' id='button2' value='Right Side View'></a>
+                </div>
+            </div>
+            {% endblock %}
+
+        </div>
+
+    </body>
+</html>
